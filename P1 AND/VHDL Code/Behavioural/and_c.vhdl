@@ -8,14 +8,14 @@ entity and_c is
 
 end entity;
 
-architecture arq of end_c is
+architecture arq of and_c is
 begin
 	process(ent)
 	begin
 		case ent is
 			--when 11=>sal<='1';
 			when 3=>sal<='1';
-			when other =>sal<='0';
+			when others=>sal<='0';
 		end case;
-	end process
+	end process;
 end architecture;
