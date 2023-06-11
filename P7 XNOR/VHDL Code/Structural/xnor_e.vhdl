@@ -10,12 +10,6 @@ end entity;
 aRcHitECTure arq of xnor_c is
 begin
  process(entrada)
-  begin
-    case entrada is
-     when 0=>F<='1';
-     when 1=>F<='0';
-     when 2=>F<='0';
-     when 3=>F<='1';
-     end case; 
+   F<=A xnor B;
  end process;
 end architecture;
