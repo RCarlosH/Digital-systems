@@ -1,7 +1,6 @@
 --P01 Structural AND
 
 library ieee;
-
 use ieee.std_logic_1164.all;
 
 entity and_e is
