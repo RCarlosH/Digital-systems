@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity d16seg_s is 
+port(ENT:in integer range 0 to 32;
+SAL: out std_logic_vector (13 downto 0));
+end entity;
+
+architecture arq of d16seg_s is 
+begin
+process(ENT)
+begin
+case ENT is
+when 0 => SAL
+<=not"0011001100101000";
+when 1 => SAL
+<=not"1100111111000000";
+when 2 => SAL
+<=not"1100111100000000";
+when 3 => SAL
+<=not"0011001111000000";
+when 4 => SAL
+<=not"1111001111000000";
+when 5 => SAL
+<=not"1100000000010010";
+when 6 => SAL
+<=not"1110001111000100";
+when 7 => SAL
+<=not"1111111100000000";
+when 8 => SAL
+<=not"0011001100100100";
+when 9 => SAL
+<=not"1100110000010010";
+when 10 => SAL
+<=not"1100111100000000";
+when 11 => SAL
+<=not"1101110111000000";
+when 12 => SAL
+<=not"1100111111000000";
+when 13 => SAL
+<=not"0011001100100100";
+when 14 => SAL
+<=not"1	1	0	1	1	1	1	1	0	1	0	00000";
+when 15 => SAL
+<=not"1	1	0	0	1	1	0	0	0	0	0	1	0	0	1	0";
+when 16 => SAL
+<=not"0	0	1	1	0	0	1	1	0	0	1	0	0	1	0	0";
+when 17 => SAL
+<=not"1	1	0	0	1	1	1	1	1	1	0	0	0	0	0	0";
+when 18 => SAL
+<=not"1	1	0	0	1	1	1	1	1	1	0	0	0	0	0	0";
+when 19 => SAL
+<=not"1	1	1	0	0	0	1	1	1	1	0	0	0	1	0	0";
+when 20 => SAL
+<=not"1	1	0	0	1	1	0	0	0	0	0	1	0	0	1	0";
+when 21 => SAL
+<=not"0	0	1	1	0	0	1	1	0	0	1	0	0	1	0	0";
+when 22 => SAL
+<=not"1	1	0	1	1	1	1	1	0	1	0	0	0	0	0	0";
+when others =>SAL<=
+"1111111111111111";
+end case;
+end process;
+end architecture;
+
+
